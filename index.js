@@ -17,6 +17,6 @@ app.get("/DEXhackathon", function(req,res){
 	res.render("hackathon");
 });
 
-app.listen(3000,function(req,res){
-	console.log("began listening");
+app.listen(process.env.PORT || 3000, function(req,res){
+	console.log("Began listening");
 });
