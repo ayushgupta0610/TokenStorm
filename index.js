@@ -13,10 +13,6 @@ app.get("/",function(req,res){
 	res.render("Index");
 });
 
-app.get("/test",function(req,res){
-	res.render("test");
-});
-
 app.get("/Gallery",function(req,res){
 	res.render("Gallery");
 });
