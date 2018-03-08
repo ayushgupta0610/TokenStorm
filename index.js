@@ -21,6 +21,6 @@ app.get("/PressRelease", function(req,res){
 	res.render("PressRelease");
 });
 
-app.listen(process.env.PORT || 3000, function(req,res){
-	console.log("Began listening");
+app.listen(3000,function(req,res){
+	console.log("began listening");
 });
