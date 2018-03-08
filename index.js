@@ -10,15 +10,15 @@ app.use(express.static(path.join(__dirname, 'public/docs')));
 app.set("view engine", "ejs");
 
 app.get("/",function(req,res){
-	res.render("Index");
+	res.render("index");
 });
 
 app.get("/Gallery",function(req,res){
-	res.render("Gallery");
+	res.render("gallery");
 });
 
 app.get("/PressRelease", function(req,res){
-	res.render("PressRelease");
+	res.render("pressRelease");
 });
 
 app.listen(process.env.PORT || 3000,function(req,res){
