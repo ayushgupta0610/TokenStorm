@@ -10,11 +10,19 @@ app.use(express.static(path.join(__dirname, 'public/docs')));
 app.set("view engine", "ejs");
 
 app.get("/",function(req,res){
-	res.render("index");
+	res.render("Index");
 });
 
-app.get("/DEXhackathon", function(req,res){
-	res.render("hackathon");
+app.get("/test",function(req,res){
+	res.render("test");
+});
+
+app.get("/Gallery",function(req,res){
+	res.render("Gallery");
+});
+
+app.get("/PressRelease", function(req,res){
+	res.render("PressRelease");
 });
 
 app.listen(process.env.PORT || 3000, function(req,res){

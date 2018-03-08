@@ -1,270 +1,111 @@
 body {
-	background-color:rgba( 190, 9, 0, 0.9);
-	color:white;
-	font-weight: bold;
-
+  color: #fff;
+  font-family: Algeria;
+  font-size: 16px;
 }
 
-.topDisplay{
-	height:100%;
-	min-height:105vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)),
-	url("Arifa.JPG");
-	
-	background-attachment: fixed;
-	background-position:center;
-	background-repeat:no-repeat;
-	background-size: cover;
-	
-	}
-
-.nav_top{
-	visibility: hidden;
-}
-img{
-	margin-top:10px;
-	height:90px;
-	width: 120px;
-	
-
+.background {
+  height: 100%;
+  min-height: 105vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("Arifa.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.menu{
-	padding:20px 50px;
-	
-}
-a{
-	color:white;
-	cursor:pointer;
-}
+/* .bg-dark{
+  background-color: #808284 !important;
+} */
 
-.check{
-	background-color:red;
-}
-ul{
-	
-	list-style: none;
-	color:white;
-	font-weight: bold;
-	text-align: right;
+/* Home Page */
+
+.header {
+  /* height: 64px; */
 }
 
-.display{
-	
-	text-align: center;
-	
-	margin-top:40%;
-	font-size:60px;
-	font-family:Impact;
-	
- 	-webkit-text-fill-color: transparent;
- 	background: -webkit-linear-gradient(transparent, transparent),
-             url(http://cloud-3.steamusercontent.com/ugc/81469728911596489/F6610EC5FEDED82ECF056B7B796162F02C340445/) repeat;
- 	background: -o-linear-gradient(transparent, transparent);
- 	-webkit-background-clip: text;
-	
+#navbarResponsive {
+  font-size: 20px;
+  font-family: initial;
 }
 
-
-.Display{
-	height:100%;
-	padding-top: 20px;
-	padding-bottom:70px;
+.parentContainer {
+  margin-top: 60px;
+  padding-top: 20px;
 }
 
-.vertical-center {
- 
-  vertical-align:middle;
+.boxes {
+  display: inline-block;
 }
 
-.nav_background{
-	 background:rgba(0, 0, 0, 0.7); 
-	 color:black;
-	-webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 14.1 */
-       -moz-animation: fadein 4s; /* Firefox < 16 */
-        -ms-animation: fadein 4s; /* Internet Explorer */
-         -o-animation: fadein 4s; /* Opera < 14.1 */
-            animation: fadein 4s;
+.imgContainer{
+    float:left;
 }
 
-
-@keyframes fadein {
-    from { background:rgba(0, 0, 0, 0.1); }
-    to   { background:rgba(0, 0, 0, 0.7); }
+.carousel-indicators {
+  top: 20px;
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { background:rgba(0, 0, 0, 0.1); }
-    to   { background:rgba(0, 0, 0, 0.7); }
+.carousel-inner>.item>img, .d-block {
+  height: 590px !important;
 }
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { background:rgba(0, 0, 0, 0.1); }
-    to   { background:rgba(0, 0, 0, 0.7); }
+/* Gallery Page */
+.gallery {
+  width: 600px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+  //position: relative;
+}
+.img-c {
+  width: 200px;
+  height: 200px;
+  float: left;
+  position: relative;
+  overflow: hidden;
 }
 
-.vertical-center {
-  height: 80%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 80vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
 }
 
-h1, p{
-	text-align:center;
-	padding:20px 0px;
-	color:white;
-
-
+.img-w img {
+  display: none;
 }
 
-
-.speakers{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url("speaker.jpg");
-	background-attachment: fixed;
-	background-position:center;
-	background-repeat:no-repeat;
-	background-size: cover;
-	height:35em;
-	color:white;
+.img-c {
+    transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
 }
 
-
-.agenda{
-	background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("agenda.jpg");
-	background-attachment: fixed;
-	background-position:center;
-	background-repeat:no-repeat;
-	background-size: cover;
-	height:40em;
-	color:white;
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
 }
 
-.nav-link{
-	font-size:30px;
-	font-family:Sofia;
-	margin:0px 10px;
-}
-.nav-link:hover{
-	color:red;
-}
-
-.dropdown p {
-	display:block;
-	padding: 12px 16px;
+.img-c.image {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+  //transform: translateX(-50%);
 }
 
-.dropdown{
-	display:none;
-	position:relative;
-	background-color: rgba(0, 0, 0, 0.6);
-	margin-left:50px;
-	font-weight:bold;
-}
-.dropbtn{
-	margin-left:50px;
-	background-color:Transparent;
-	border: rgba( 255, 255, 255, 0.6);
-	font-size: 30px;
-	margin-bottom: 50%;
-	font-weight: bold;
-	color:rgba( 255, 255, 255, 0.6);
-}
-.show{
-	display: block;
+.img-c.postimage {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* arrow */
-
-.arrow {
-  box-sizing: border-box;
-  height: 5vw;
-  width: 5vw;
-  cursor:pointer;
-  margin:0 auto;
-
-  border-style: solid;
-  border-color: white;
-  border-width: 0px 1px 1px 0px;
-  transform: rotate(45deg);
-  transition: border-width 150ms ease-in-out;
-}
-
-.arrow:hover {
-  border-bottom-width: 4px;
-  border-right-width: 4px;
-}
-
-.img-responsive:hover{
-	background:black;
-}
-#speak{
-	
-	
-}
-
-#third{
-	height:50%;
-	
-}
-
-.social{
-	margin-left:40%;
-	
-
-}
-
-#social_media{
-	margin:0px 1%;
-	font-size:35px;
-}
-
-.fa {
-  padding: 10px;
-  font-size: 50px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 10px;
-  border-radius: 70%;
-  
-}
-.fa:hover{
-	opacity:0.8;
-	color:red;
-
-}
-button{
-	font-family: Impact;
-	cursor:pointer;
-}
-
-button:focus{
-	outline:none;
-}
-
-
-button:active{
-	outline:none;
-}
-#brochure{
-	height:80%;
-	width:80%;
-	margin: 40% 20% 0% 20%;
-}
-
-.check{
-	background-color:red;
-}
-
-#press{
-	height:100%;
-	width:50%;
-	margin-left:20%;
-}
-#hack{
-	margin-top:20%;
+.img-c.image.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
 }
